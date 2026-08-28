@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1 class="title">Formulário</h1>
+        <p class="subtitle">Preencha os dados abaixo e envie sua mensagem.</p>
+
+        <form>
+          <div class="form-grid">
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input id="nome" type="text" placeholder="Seu nome" />
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" type="email" placeholder="seuemail@email.com" />
+            </div>
+
+            <div class="field">
+              <label for="senha">Senha</label>
+              <input id="senha" type="password" placeholder="Digite sua senha" />
+            </div>
+
+            <div class="field full radio-field">
+              <span class="field-title">Sexo</span>
+              <div class="option-group">
+                <label class="option-item" for="sexo-masculino">
+                  <input id="sexo-masculino" type="radio" name="sexo" value="masculino" />
+                  Masculino
+                </label>
+                <label class="option-item" for="sexo-feminino">
+                  <input id="sexo-feminino" type="radio" name="sexo" value="feminino" />
+                  Feminino
+                </label>
+                <label class="option-item" for="sexo-outro">
+                  <input id="sexo-outro" type="radio" name="sexo" value="outro" />
+                  Não declarado
+                </label>
+              </div>
+            </div>
+
+            <div class="field full checkbox-field">
+              <span class="field-title">Marque as opções do seu interesse</span>
+              <div class="option-group wrap">
+                <label class="option-item" for="assunto-aspnet">
+                  <input id="assunto-aspnet" type="checkbox" value="ASP.NET" />
+                  ASP.NET
+                </label>
+                <label class="option-item" for="assunto-javascript">
+                  <input id="assunto-javascript" type="checkbox" value="JavaScript" />
+                  JavaScript
+                </label>
+                <label class="option-item" for="assunto-php">
+                  <input id="assunto-php" type="checkbox" value="PHP" />
+                  PHP
+                </label>
+                <label class="option-item" for="assunto-python">
+                  <input id="assunto-python" type="checkbox" value="Python" />
+                  Python
+                </label>
+              </div>
+            </div>
+
+            <div class="field full">
+              <label for="mensagem">Entre com seus comentários na caixa a seguir:</label>
+              <textarea id="mensagem" placeholder="Escreva sua mensagem..."></textarea>
+
+
+              
+            </div>
+
+            <div class="field full">
+              <label for="tecnologias">Selecione as tecnologias que deseja aprender:</label>
+              <select id="tecnologias" multiple>
+                <option value="aspnet">ASP.NET</option>
+                <option value="linguagem-c">Linguagem C</option>
+                <option value="C">C++</option>
+                <option value="Java">Java</option>
+                <option value="javaScript">JavaScript</option>
+              </select>
+            </div>
+
+            <div class="field full file-field">
+              <span class="field-title">Selecione um arquivo:</span>
+              <input type="file" id="arquivo" name="arquivo" />
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="submit">Enviar formulário</button>
+            <button type="reset" class="btn-secondary">resetar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
