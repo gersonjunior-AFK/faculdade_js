@@ -112,36 +112,3 @@ else {
 alert(`O dia da semana é: ${nomeDia}`);
 }
 
-function somarTabuada() {
-    let numero = Number(prompt("Digite um número:"));  
-    resultado = "";
-    for (let i = 1; i <= 10; i++) {
-        resultado += `${numero} + ${i} = ${numero + i}\n`;
-    }
-    alert(resultado);
-}
-
-function subtrairTabuada() {
-    let numero = Number(prompt("Digite um número:"));  
-    resultado = "";
-    for (let i = 1; i <= 10; i++) {
-        resultado += `${numero} - ${i} = ${numero - i}\n`;
-    }
-    alert(resultado);
-}
-function multiplicarTabuada() {
-    let numero = Number(prompt("Digite um número:"));  
-    resultado = "";
-    for (let i = 1; i <= 10; i++) {
-        resultado += `${numero} * ${i} = ${numero * i}\n`;
-    }
-    alert(resultado);
-}
-function dividirTabuada() {
-    let numero = Number(prompt("Digite um número:"));  
-    resultado = "";
-    for (let i = 1; i <= 10; i++) {
-        resultado += `${numero} / ${i} = ${numero / i}\n`;
-    }
-    alert(resultado);
-}
