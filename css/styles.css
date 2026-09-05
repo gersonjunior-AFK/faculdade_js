@@ -176,6 +176,23 @@ button:active {
     background-color: #64748b;
 }
 
+.alert {
+    display: none;
+    margin-top: 24px;
+    padding: 16px 20px;
+    border: 1px solid #34d399;
+    border-radius: 10px;
+    background-color: rgba(6, 95, 70, 0.35);
+    color: #d1fae5;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.alert-visible {
+    display: block;
+}
+
 @media (max-width: 600px) {
     .card {
         padding: 28px 20px;
