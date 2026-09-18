@@ -10,16 +10,20 @@
   <body>
     <main>
       <section class="card">
-        <h1 class="title">atividade 1</h1>     
-        <form>
-          <label>Primeiro número:</label><br />
-          <input type="number" id="n1" /><br /><br />
-          <label>Segundo número:</label><br />
-          <input type="number" id="n2" /><br /><br />
-          <input type="button" value="Somar" onclick="somar()" />
+        <h1 class="title">atividade 4</h1>
+
+       <form>
+<label>Turno (M, V ou N):</label><br>
+<input type="text" id="txtTurno" maxlength="1"><br><br>
+<input type="button" value="Consultar" onclick="consultar()">
+</form>
+<h2 id="resultado">Turno:</h2>
+
+        <div id="alertaResultado" class="alert" role="status"></div>
+        <h2 id="resultado"></h2>
         </form>
-        <h2 id="resultado">Resultado:</h2>
       </section>
     </main>
+
   </body>
 </html>

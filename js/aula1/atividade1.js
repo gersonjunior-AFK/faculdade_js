@@ -1,3 +1,4 @@
+//exercicio 1
 function cadastrar() {
 let num1 = Number(prompt("Digite um número:"));
 
@@ -8,7 +9,7 @@ if (num1 % 2 == 0){
 }
 
 }
-
+//exercicio 2
 function maior() {
 let num1 = Number(prompt("Digite um número:"));
 let num2 = Number(prompt("Digite outro número:"));
@@ -22,6 +23,8 @@ if (num1 > num2){
 }
 }
 
+//exercicio 3
+
 function verificaridade() {
 let idade = Number(prompt("Digite sua idade:"));
 
@@ -34,6 +37,8 @@ if (idade >= 16){
 }
 }
 
+//exercicio 4
+
 function media() {
 let num1 = Number(prompt("Primeira nota:"));
 let num2 = Number(prompt("Segunda nota:"));
@@ -44,6 +49,8 @@ if (resultado) {
     alert(`Média: ${(num1 + num2) / 2} - Reprovado`)
 }
 }
+
+//exercicio 5
 
 function calculardesconto() {
     let preco = Number(prompt("Digite o preço do produto:"));
@@ -60,6 +67,8 @@ else {
         alert("Nenhum desconto aplicado");
     }
     }
+
+    // exercise 6
 
    function calcularIMC() {
     let peso = Number(prompt("Digite seu peso em kg:"));
@@ -78,6 +87,8 @@ else {
         alert(`peso sobre humano ${imc.toFixed(2)}`);
     }
     }
+
+//exercicio 7
 
     function nomedodia() {
         let dia = Number(prompt("Digite um número de 1 a 7:"));
@@ -112,3 +123,47 @@ else {
 alert(`O dia da semana é: ${nomeDia}`);
 }
 
+//exercicio 8
+
+function obterValores() {
+  const numero1 = Number(document.getElementById("numero1").value);
+  const numero2 = Number(document.getElementById("numero2").value);
+
+  return { numero1, numero2 };
+}
+
+function mostrarResultado(operacao, resultado) {
+  const textoResultado = document.getElementById("resultado");
+  textoResultado.textContent = `Resultado da ${operacao}: ${resultado}`;
+}
+
+function somar() {
+  const { numero1, numero2 } = obterValores();
+  const resultado = numero1 + numero2;
+  mostrarResultado("soma", resultado);
+}
+
+function subtrair() {
+  const { numero1, numero2 } = obterValores();
+  const resultado = numero1 - numero2;
+  mostrarResultado("subtração", resultado);
+}
+
+function multiplicar() {
+  const { numero1, numero2 } = obterValores();
+  const resultado = numero1 * numero2;
+  mostrarResultado("multiplicação", resultado);
+}
+
+function dividir() {
+  const { numero1, numero2 } = obterValores();
+
+  if (numero2 === 0) {
+    const textoResultado = document.getElementById("resultado");
+    textoResultado.textContent = "Não é possível dividir por zero.";
+    return;
+  }
+
+  const resultado = numero1 / numero2;
+  mostrarResultado("divisão", resultado);
+}
