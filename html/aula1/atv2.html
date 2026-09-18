@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Somar números</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <script src="../../js/aula1/atividade1.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1 class="title">Somar números</h1>
+        <p class="subtitle">Digite dois números e clique em somar.</p>
+
+        <form>
+          <div class="form-grid">
+            <div class="field">
+              <label for="numero1">Número 1</label>
+              <input id="numero1" name="numero1" type="number" step="any" />
+            </div>
+
+            <div class="field">
+              <label for="numero2">Número 2</label>
+              <input id="numero2" name="numero2" type="number" step="any" />
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="button" onclick="cadastrar()">Par ou Ímpar</button>
+            <button type="button" onclick="maior()">Maior número</button>
+            <button type="button" onclick="verificaridade()">Pode votar?</button>
+          </div>
+
+          <div class="button-row">
+            <button type="button" onclick="media()">Situação do aluno</button>
+            <button type="button" onclick="calculardesconto()">Desconto</button>
+            <button type="button" onclick="calcularIMC()">IMC</button>
+          </div>
+
+          <div class="button-row">
+            <button type="button" onclick="nomedodia()">Nome do dia</button>
+            <button type="button" onclick="somar()">Somar</button>
+            <button type="button" onclick="subtrair()">Subtrair</button>
+          </div>
+
+          <div class="button-row">
+            <button type="button" onclick="multiplicar()">Multiplicar</button>
+            <button type="button" onclick="dividir()">Dividir</button>
+          </div>
+
+          <div id="alertaResultado" class="alert" role="status"></div>
+          <h2 id="resultado"></h2>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

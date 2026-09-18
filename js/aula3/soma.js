@@ -29,3 +29,56 @@ function converter() {
 
   document.getElementById("resultado").innerText = caixaAlta + " (" + tamanho + " letras)";
 }
+
+//exercicio 4
+function consultar() {
+let opc = document.getElementById("txtTurno")
+.value.trim().toUpperCase();
+let resp = "";
+switch (opc) {
+case "M":
+resp = "Matutino";
+break;
+case "V":
+resp = "Vespertino";
+break;
+case "N":
+resp = "Noturno";
+break;
+default:
+resp = "Opção Inválida";
+}
+document.getElementById("resultado").innerText =
+"Turno: " + resp;
+}
+
+//exercício 5
+
+function contar() {
+let limite = Number(
+document.getElementById("txtFim").value
+);
+let i = 1;
+let linha = "";
+while (i <= limite) {
+linha += i + " ";
+i++;
+}
+document.getElementById("resultado").innerText =
+"Sequência: " + linha;
+}
+
+//exercício 6
+function soletrar() {
+  let termo = document.getElementById("txtTermo").value.toUpperCase();
+  let resultado = "";
+  for (let i = 0; i < termo.length; i++){
+    resultado += termo[i] + " ";
+    if (i < termo.length - 1){
+      resultado += " ";
+    }
+  }
+  document.getElementById("resultado").innerText = "soletrado: " + resultado;
+}
+
+//atividade1
