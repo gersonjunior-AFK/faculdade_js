@@ -1,8 +1,10 @@
+// A função prompt() recebe um valor digitado pelo usuário para uso no programa.
 function situacaoAluno() {
   const nota1 = Number(prompt("Digite a primeira nota:"));
   const nota2 = Number(prompt("Digite a segunda nota:"));
   const media = (nota1 + nota2) / 2;
 
+  // O if/else if verifica as faixas de nota e decide a situação do aluno.
   if (media >= 7) {
     alert(`Média: ${media.toFixed(2)} - Aprovado`);
   } else if (media >= 5) {
@@ -12,6 +14,7 @@ function situacaoAluno() {
   }
 }
 
+// Aqui o programa avalia o valor da compra e aplica o desconto correto conforme a regra.
 function calcularDesconto() {
   const valorCompra = Number(prompt("Digite o valor da compra:"));
 
@@ -24,6 +27,7 @@ function calcularDesconto() {
   }
 }
 
+// O cálculo do IMC usa peso dividido pela altura ao quadrado, e a condição define a classificação.
 function classificarIMC() {
   const peso = Number(prompt("Digite o peso em kg:"));
   const altura = Number(prompt("Digite a altura em metros:"));
@@ -38,6 +42,7 @@ function classificarIMC() {
   }
 }
 
+// O switch seleciona um caso específico para cada número de 1 a 7 e usa default para valores inválidos.
 function nomeDoDia() {
   const numero = Number(prompt("Digite um número de 1 a 7:"));
 
@@ -69,6 +74,7 @@ function nomeDoDia() {
   }
 }
 
+// getElementById busca um elemento do HTML pelo id e permite ler ou alterar o valor dele.
 function obterValores() {
   const numero1 = Number(document.getElementById("numero1").value);
   const numero2 = Number(document.getElementById("numero2").value);
@@ -76,11 +82,13 @@ function obterValores() {
   return { numero1, numero2 };
 }
 
+// A função mostrarResultado escreve o texto do cálculo dentro do elemento de resultado.
 function mostrarResultado(operacao, resultado) {
   const textoResultado = document.getElementById("resultado");
   textoResultado.textContent = `Resultado da ${operacao}: ${resultado}`;
 }
 
+// Cada função de operação usa os valores lidos do formulário e aplica a operação matemática correspondente.
 function somar() {
   const { numero1, numero2 } = obterValores();
   const resultado = numero1 + numero2;
@@ -112,6 +120,7 @@ function dividir() {
   mostrarResultado("divisão", resultado);
 }
 
+// Funções auxiliares para os botões da página de calculadora.
 function somarTabuada() {
   somar();
 }

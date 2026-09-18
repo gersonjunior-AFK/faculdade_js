@@ -1,7 +1,9 @@
 // Exercício 1 - Par ou Ímpar
+// A função prompt() abre uma caixa de diálogo para receber um valor digitado pelo usuário.
 function cadastrar() {
   let num1 = Number(prompt("Digite um número:"));
 
+  // O operador % calcula o resto da divisão. Se o resto for 0, o número é par.
   if (num1 % 2 == 0) {
     alert("seu numero e par:");
   } else {
@@ -10,6 +12,7 @@ function cadastrar() {
 }
 
 // Exercício 2 - Maior de dois números
+// O if/else if/else testa condições em ordem e executa a primeira que for verdadeira.
 function maior() {
   let num1 = Number(prompt("Digite um número:"));
   let num2 = Number(prompt("Digite outro número:"));
@@ -24,6 +27,7 @@ function maior() {
 }
 
 // Exercício 3 - Pode votar?
+// A estrutura if/else if organiza vários critérios para decidir o resultado final.
 function verificaridade() {
   let idade = Number(prompt("Digite sua idade:"));
 
@@ -37,6 +41,7 @@ function verificaridade() {
 }
 
 // Exercício 4 - Situação do estudante
+// A variável resultado guarda um valor booleano e controla o caminho do if.
 function media() {
   let num1 = Number(prompt("Primeira nota:"));
   let num2 = Number(prompt("Segunda nota:"));
@@ -50,6 +55,7 @@ function media() {
 }
 
 // Exercício 5 - Desconto progressivo
+// A condição else if avalia níveis diferentes de desconto conforme o valor informado.
 function calculardesconto() {
   let preco = Number(prompt("Digite o preço do produto:"));
   let precoFinal = preco;
@@ -66,6 +72,7 @@ function calculardesconto() {
 }
 
 // Exercício 6 - IMC com classificação
+// O cálculo do IMC usa peso dividido pela altura ao quadrado.
 function calcularIMC() {
   let peso = Number(prompt("Digite seu peso em kg:"));
   let altura = Number(prompt("Digite sua altura em metros:"));
@@ -83,6 +90,7 @@ function calcularIMC() {
 }
 
 // Exercício 7 - Nome do dia
+// O switch escolhe um caso conforme o valor informado e o default trata valores inválidos.
 function nomedodia() {
   let dia = Number(prompt("Digite um número de 1 a 7:"));
   let nomeDia;
@@ -118,6 +126,7 @@ function nomedodia() {
 }
 
 // Exercício 8 - Calculadora com botões
+// getElementById localiza um elemento do HTML para ler ou alterar o conteúdo dele.
 function obterValores() {
   const numero1 = Number(document.getElementById("numero1").value);
   const numero2 = Number(document.getElementById("numero2").value);
@@ -125,11 +134,13 @@ function obterValores() {
   return { numero1, numero2 };
 }
 
+// A função mostrarResultado atualiza o texto exibido no elemento com id resultado.
 function mostrarResultado(operacao, resultado) {
   const textoResultado = document.getElementById("resultado");
   textoResultado.textContent = `Resultado da ${operacao}: ${resultado}`;
 }
 
+// As funções de operação recebem os valores, calculam e exibem o resultado na tela.
 function somar() {
   const { numero1, numero2 } = obterValores();
   const resultado = numero1 + numero2;
