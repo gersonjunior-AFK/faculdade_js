@@ -29,16 +29,30 @@ function calcularDesconto() {
 
 // O cálculo do IMC usa peso dividido pela altura ao quadrado, e a condição define a classificação.
 function classificarIMC() {
-  const peso = Number(prompt("Digite o peso em kg:"));
-  const altura = Number(prompt("Digite a altura em metros:"));
-  const imc = peso / (altura * altura);
+  const pesoInput = document.getElementById("peso");
+  const alturaInput = document.getElementById("altura");
+  const resultadoCampo = document.getElementById("resultado");
 
-  if (imc < 18.5) {
-    alert(`IMC: ${imc.toFixed(2)} - Abaixo do peso.`);
-  } else if (imc < 25) {
-    alert(`IMC: ${imc.toFixed(2)} - Peso normal.`);
+  let peso = 0;
+  let altura = 0;
+
+  if (pesoInput && alturaInput && pesoInput.value !== "" && alturaInput.value !== "") {
+    peso = Number(pesoInput.value);
+    altura = Number(alturaInput.value);
   } else {
-    alert(`IMC: ${imc.toFixed(2)} - Sobrepeso.`);
+    peso = Number(prompt("Digite o peso em kg:"));
+    altura = Number(prompt("Digite a altura em metros:"));
+  }
+
+  const imc = peso / (altura * altura);
+  const mensagem = `IMC: ${imc.toFixed(2)} - ${
+    imc < 18.5 ? "Abaixo do peso." : imc < 25 ? "Peso normal." : "Sobrepeso."
+  }`;
+
+  if (resultadoCampo) {
+    resultadoCampo.textContent = mensagem;
+  } else {
+    alert(mensagem);
   }
 }
 
