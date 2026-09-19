@@ -27,7 +27,8 @@ function calcularDesconto() {
   }
 }
 
-// O cálculo do IMC usa peso dividido pela altura ao quadrado, e a condição define a classificação.
+// O cálculo do IMC usa peso em quilos dividido pela altura em metros ao quadrado.
+// Fórmula: IMC = peso / (altura * altura)
 function classificarIMC() {
   const pesoInput = document.getElementById("peso");
   const alturaInput = document.getElementById("altura");
@@ -45,9 +46,18 @@ function classificarIMC() {
   }
 
   const imc = peso / (altura * altura);
-  const mensagem = `IMC: ${imc.toFixed(2)} - ${
-    imc < 18.5 ? "Abaixo do peso." : imc < 25 ? "Peso normal." : "Sobrepeso."
-  }`;
+
+  let categoria = "";
+
+  if (imc < 18.5) {
+    categoria = "Abaixo do peso";
+  } else if (imc >= 18.5 && imc < 25) {
+    categoria = "Peso normal";
+  } else {
+    categoria = "Sobrepeso";
+  }
+
+  const mensagem = `IMC: ${imc.toFixed(2)} - ${categoria}`;
 
   if (resultadoCampo) {
     resultadoCampo.textContent = mensagem;
